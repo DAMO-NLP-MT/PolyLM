@@ -115,6 +115,9 @@ print(result['text'])
 ## Demo
 We have provided a web [demo](https://modelscope.cn/studios/damo/demo-polylm-multialpaca-13b/summary) based on gradio for you to experience. Similarly, you can run [polylm_web_demo_gradio.py](https://huggingface.co/DAMO-NLP-MT/polylm-chat-13b/blob/main/polylm_web_demo_gradio.py) to deploy a web demo locally (it requires 48GB of GPU memory, i.e., 2 V100 GPUs or a single A100 GPU).
 
+## License Agreement
+Researchers and developers are free to use the codes and model weights of PolyLM-1.7B, PolyLM-13B, PolyLM-Multialpaca-13B and PolyLM-Chat-13B.
+
 ## Bibtex
 ``` bibtex
 @misc{wei2023polylm,
