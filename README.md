@@ -12,7 +12,7 @@ We opensource PolyLM on both **Modelscope** and **Huggingface** involving two sc
 
 | Model             | Modelscope                                                                                                   | Huggingface                                                                    | 
 | :-------------------------- | -----------------------------------------------------------------------------------------------------------: | -----------------------------------------------------------------------------: |
-| **PolyLM-1.7B**             | -                                                                                                            | <a href="https://huggingface.co/DAMO-NLP-MT/polylm-1.7b">[link]<a>             |
+| **PolyLM-1.7B**             | <a href="https://modelscope.cn/models/damo/nlp_polylm_1b7_text_generation/summary">[link]<a>                 | <a href="https://huggingface.co/DAMO-NLP-MT/polylm-1.7b">[link]<a>             |
 | **PolyLM-13B**              | <a href="https://modelscope.cn/models/damo/nlp_polylm_13b_text_generation/summary">[link]<a>                 | <a href="https://huggingface.co/DAMO-NLP-MT/polylm-13b">[link]<a>              | 
 | **PolyLM-Multialpaca-13B**  | <a href="https://modelscope.cn/models/damo/nlp_polylm_multialpaca_13b_text_generation/summary">[link]<a>     | <a href="https://huggingface.co/DAMO-NLP-MT/polylm-multialpaca-13b">[link]<a>  |
 | **PolyLM-Chat-13B**         | <a href="https://www.modelscope.cn/models/damo/nlp_polylm_assistant_13b_text_generation/summary">[link]<a>   | <a href="https://huggingface.co/DAMO-NLP-MT/polylm-chat-13b">[link]<a>         |
