@@ -34,14 +34,30 @@ pip install transformers==4.31.0 accelerate einops
 ```
 
 ### Transformers
+There are example scripts using PolyLM-13B, PolyLM-Multialpaca-13B, and PolyLM-Chat-13B for inference.
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-tokenizer = AutoTokenizer.from_pretrained("DAMO-NLP-MT/polylm-13b", legacy=False, use_fast=False)
-model = AutoModelForCausalLM.from_pretrained("DAMO-NLP-MT/polylm-13b", device_map="auto")
+# PolyLM-13B
+model_path = "DAMO-NLP-MT/polylm-13b"
+# PolyLM-Multialpaca-13B
+# model_path = "DAMO-NLP-MT/polylm-multialpaca-13b"
+# PolyLM-Chat-13B
+# model_path = "DAMO-NLP-MT/polylm-chat-13b"
+
+tokenizer = AutoTokenizer.from_pretrained(model_path, legacy=False, use_fast=False)
+model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto")
 model.eval()
 
+# PolyLM-13B
 input_doc = f"Beijing is the capital of China.\nTranslate this sentence from English to Chinese."
+# PolyLM-Multialpaca-13B
+# input_doc = f"Beijing is the capital of China.\nTranslate this sentence from English to Chinese.\n\n"
+# PolyLM-Chat-13B
+# input_doc = f"Beijing is the capital of China.\nTranslate this sentence from English to Chinese."
+# input_doc = "<|user|>\n" + f"{input_doc}\n" + "<|assistant|>\n"
+
 inputs = tokenizer(input_doc, return_tensors="pt")
 
 generate_ids = model.generate(
