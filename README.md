@@ -23,3 +23,38 @@ Find below some example scripts on how to use the model in Modelscope and Transf
 
 ### Requirements
 
+```bash
+git clone https://github.com/modelscope/modelscope
+cd modelscope
+pip install .
+```
+
+```bash
+pip install transformers==4.31.0 accelerate einops
+```
+
+### Transformers
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("DAMO-NLP-MT/polylm-13b", legacy=False, use_fast=False)
+model = AutoModelForCausalLM.from_pretrained("DAMO-NLP-MT/polylm-13b", device_map="auto")
+model.eval()
+
+input_doc = f"Beijing is the capital of China.\nTranslate this sentence from English to Chinese."
+inputs = tokenizer(input_doc, return_tensors="pt")
+
+generate_ids = model.generate(
+  inputs.input_ids,
+  attention_mask=inputs.attention_mask,
+  do_sample=False,
+  num_beams=4,
+  max_length=128,
+  early_stopping=True
+)
+
+decoded = tokenizer.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
+print(f">>> {decoded}")
+### results
+### Beijing is the capital of China.\nTranslate this sentence from English to Chinese.\\n北京是中华人民共和国的首都。\n ...
+```
