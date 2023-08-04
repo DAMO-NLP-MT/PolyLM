@@ -111,3 +111,17 @@ pipeline_ins = pipeline(Tasks.text_generation, model=model_dir)
 result = pipeline_ins(input_text, **kwargs)
 print(result['text'])
 ```
+
+## Demo
+
+## Bibtex
+``` bibtex
+@misc{wei2023polylm,
+      title={PolyLM: An Open Source Polyglot Large Language Model}, 
+      author={Xiangpeng Wei and Haoran Wei and Huan Lin and Tianhao Li and Pei Zhang and Xingzhang Ren and Mei Li and Yu Wan and Zhiwei Cao and Binbin Xie and Tianxiang Hu and Shangjie Li and Binyuan Hui and Bowen Yu and Dayiheng Liu and Baosong Yang and Fei Huang and Jun Xie},
+      year={2023},
+      eprint={2307.06018},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
