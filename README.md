@@ -17,3 +17,9 @@ We opensource PolyLM on both **Modelscope** and **Huggingface** involving two sc
 | **PolyLM-Multialpaca-13B**  | <a href="https://modelscope.cn/models/damo/nlp_polylm_multialpaca_13b_text_generation/summary">[link]<a>     | <a href="https://huggingface.co/DAMO-NLP-MT/polylm-multialpaca-13b">[link]<a>  |
 | **PolyLM-Chat-13B**         | <a href="https://www.modelscope.cn/models/damo/nlp_polylm_assistant_13b_text_generation/summary">[link]<a>   | <a href="https://huggingface.co/DAMO-NLP-MT/polylm-chat-13b">[link]<a>         |
 
+## Usage
+
+Find below some example scripts on how to use the model in Modelscope and Transformers.
+
+### Requirements
+
